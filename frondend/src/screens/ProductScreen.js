@@ -1,6 +1,7 @@
 import React from 'react'
 import Rating from '../components/Rating';
 import data from '../data';
+import { Link } from 'react-router-dom';
 
 export default function ProductScreen(props) {
     const product = data.products.find(x => x._id === props.match.params.id);
@@ -9,6 +10,7 @@ export default function ProductScreen(props) {
     }
     return ( 
         <div>
+            <Link to="/">Back to result</Link>
         <div className="row top">
           <div className="col-2">
             <img className="large" src={product.image} alt={product.name}></img>
